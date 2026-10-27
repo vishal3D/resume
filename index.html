@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Vishal Gupta — Senior QA Engineer | AI Product Testing</title>
-<meta name="description" content="Senior QA Engineer specializing in AI agent testing, LLM output validation, API and automation. Nearly 6 years across manual, API and mobile QA." />
+<meta name="description" content="Senior QA Engineer specializing in AI agent testing, LLM output validation, API and automation. 6+ years across manual, API and mobile QA." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -155,6 +155,24 @@
     background:radial-gradient(circle,var(--violet),transparent 70%);opacity:0;transition:opacity .4s;filter:blur(40px)}
   .work-card:hover .glow{opacity:.4}
 
+  /* ---- impact strip ---- */
+  #impact{padding-top:0}
+  .impact{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+  .imp{padding:26px 24px;border-right:1px solid var(--panel-border)}
+  .imp:last-child{border-right:none}
+  .imp b{display:block;font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,3.2vw,34px);font-weight:700;letter-spacing:-1px;line-height:1.1;margin-bottom:6px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .imp span{font-size:13.5px;color:var(--ink-dim);line-height:1.45;display:block}
+
+  /* ---- education ---- */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .edu{padding:24px 26px}
+  .edu h3{font-family:"Space Grotesk",sans-serif;font-size:17px;font-weight:600;margin-bottom:4px}
+  .edu .inst{color:var(--cyan);font-size:14.5px;font-weight:500}
+  .edu .edu-meta{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink-faint);margin-top:8px}
+  .work-card a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(34,224,224,.35)}
+  .work-card a:hover{border-bottom-color:var(--cyan)}
+
   /* ---- certs ---- */
   .certs{display:flex;flex-direction:column;gap:14px}
   .cert{padding:20px 24px;display:flex;align-items:center;gap:16px}
@@ -191,7 +209,10 @@
   /* ---- responsive ---- */
   @media(max-width:860px){
     .hero-grid{grid-template-columns:1fr;gap:36px}
-    .skills-grid,.work-grid{grid-template-columns:1fr}
+    .skills-grid,.work-grid,.edu-grid{grid-template-columns:1fr}
+    .impact{grid-template-columns:repeat(2,1fr)}
+    .imp:nth-child(2){border-right:none}
+    .imp:nth-child(-n+2){border-bottom:1px solid var(--panel-border)}
     .nav-links{position:fixed;inset:0 0 0 auto;width:min(78vw,300px);flex-direction:column;justify-content:center;gap:14px;
       background:rgba(13,15,28,.96);backdrop-filter:blur(18px);padding:40px;transform:translateX(100%);transition:transform .35s;border-left:1px solid var(--panel-border)}
     .nav-links.open{transform:none}
@@ -221,10 +242,11 @@
     <a href="#hero" class="brand">vishal<span>.qa</span>()</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#experience">experience</a></li>
       <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
       <li><a href="#skills">skills</a></li>
       <li><a href="#work">work</a></li>
+      <li><a href="#education">education</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </div>
@@ -237,10 +259,10 @@
       <span class="hero-status"><span class="pulse"></span>All systems passing · open to opportunities</span>
       <h1>Vishal Gupta<br><span class="grad">breaks AI</span> so users don't.</h1>
       <p class="hero-role"><b>Senior QA Engineer</b> · AI Product Testing · API &amp; Automation</p>
-      <p class="hero-lede">Nearly 6 years across manual, API and mobile QA. Currently leading quality for LLM-driven agent products at BlueStacks — validating AI behavior, hunting hallucinations, and shipping faster with GenAI in the loop.</p>
+      <p class="hero-lede">6+ years across manual, API and mobile QA. Currently leading quality for LLM-driven agent products at BlueStacks — validating AI behavior, hunting hallucinations, and shipping faster with GenAI in the loop.</p>
       <div class="cta-row">
         <a href="#work" class="btn btn-primary">View the work →</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <a href="Vishal_Gupta_QA_Resume.pdf" download class="btn btn-ghost">Download resume (PDF)</a>
       </div>
     </div>
 
@@ -251,6 +273,29 @@
         <span class="term-title">~/candidate — pytest -v vishal_gupta.py</span>
       </div>
       <div class="term-body" id="termBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPACT ===== -->
+<section id="impact" aria-label="Impact at a glance">
+  <div class="wrap">
+    <div class="glass impact reveal">
+      <div class="imp"><b>6+ yrs</b><span>Manual, API and mobile QA in Agile product teams</span></div>
+      <div class="imp"><b>150–200</b><span>Test cases designed per BlueAI feature</span></div>
+      <div class="imp"><b>P1/P2</b><span>Critical defects caught across weekly and monthly release cycles</span></div>
+      <div class="imp"><b>20–30</b><span>Cross-functional engineers, designers and PMs per release</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow reveal">describe('Vishal')</div>
+    <h2 class="sec-title reveal">QA at the frontier of AI agents</h2>
+    <div class="glass about-card reveal">
+      <p>Most QA is about software that does the same thing twice. <b>I test software that doesn't.</b> At BlueStacks I lead quality for <b>BlueAI</b> — an LLM-driven agent that turns natural-language prompts into Android UI actions — which means designing test cases for behavior that's probabilistic, not deterministic: prompt parsing, skill creation, end-to-end agent execution, and validating LLM output for correctness, hallucinations and edge cases. I'm equally at home in exploratory testing, REST API validation with Postman and Newman, and automation in Cypress and Pytest. And I use Claude and Gemini daily to generate test cases, synthetic data, and utility scripts — shipping faster without dropping coverage.</p>
     </div>
   </div>
 </section>
@@ -271,11 +316,12 @@
           <ul class="exp-list">
             <li>Lead QA for BlueAI, an LLM-driven agent automating Android UI tasks from natural-language prompts; design and run 150–200 test cases per feature across skill creation, prompt parsing and end-to-end execution.</li>
             <li>Validate LLM outputs for correctness, hallucinations and edge cases; own the e2e cycle from skill-design review through production rollout.</li>
-            <li>Drove QA for OpenClaw, a sandboxed AI product — benchmarked module behavior against native Android to surface parity gaps before release.</li>
-            <li>Identify critical P1/P2 defects across weekly EBF/enhancement cycles and monthly launches; contribute to triage, release risk assessment and go/no-go calls.</li>
+            <li>Drove QA for <a href="https://openclaw.ai" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">OpenClaw</a>, a sandboxed AI product — benchmarked module behavior against native Android to surface parity gaps before release.</li>
+            <li>Identify critical P1/P2 defects across weekly EBF/enhancement cycles and monthly launches; participate in triage, release risk assessment and go/no-go decisions.</li>
             <li>Built .bst and PowerShell utilities with Claude and Gemini to automate test setup, environment prep and synthetic test-data generation.</li>
             <li>Started a Pytest GUI-automation suite using image comparison to validate emulator screen states across builds, cutting manual visual-check effort.</li>
-            <li>Mentored 2 QA interns; collaborate with 20–30 cross-functional engineers, designers and PMs per release.</li>
+            <li>API testing with Postman collections and Newman runs; Fiddler for traffic inspection on emulator and AI backend services.</li>
+            <li>Mentored 2 QA interns and onboarded new hires in a 12-person QA team; collaborate with 20–30 cross-functional engineers, designers and PMs per release in a 230+ person organization.</li>
           </ul>
         </div>
       </div>
@@ -297,17 +343,6 @@
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="wrap">
-    <div class="eyebrow reveal">describe('Vishal')</div>
-    <h2 class="sec-title reveal">QA at the frontier of AI agents</h2>
-    <div class="glass about-card reveal">
-      <p>Most QA is about software that does the same thing twice. <b>I test software that doesn't.</b> At BlueStacks I lead quality for <b>BlueAI</b> — an LLM-driven agent that turns natural-language prompts into Android UI actions — which means designing test cases for behavior that's probabilistic, not deterministic: prompt parsing, skill creation, end-to-end agent execution, and validating LLM output for correctness, hallucinations and edge cases. I'm equally at home in exploratory testing, REST API validation with Postman and Newman, and automation in Cypress and Pytest. And I use Claude and Gemini daily to generate test cases, synthetic data, and utility scripts — shipping faster without dropping coverage.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===== SKILLS ===== -->
 <section id="skills">
   <div class="wrap">
@@ -320,7 +355,7 @@
         <div class="chips">
           <span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Integration</span>
           <span class="chip">Smoke</span><span class="chip">Sanity</span><span class="chip">API</span>
-          <span class="chip">Mobile (Android)</span><span class="chip">Exploratory</span><span class="chip">UAT</span>
+          <span class="chip">Mobile (Android)</span><span class="chip">Exploratory</span><span class="chip">AI/LLM Validation</span><span class="chip">UAT</span>
         </div>
       </div>
       <div class="glass skill-card reveal">
@@ -341,7 +376,7 @@
         <div class="skill-head"><span class="ico">⌨️</span><h3>Scripting &amp; Methods</h3></div>
         <div class="chips">
           <span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">PowerShell</span><span class="chip">Batch</span>
-          <span class="chip">Agile/Scrum</span><span class="chip">SDLC · STLC</span><span class="chip">Test Strategy</span><span class="chip">Risk Assessment</span>
+          <span class="chip">Agile/Scrum</span><span class="chip">SDLC · STLC</span><span class="chip">Test Planning &amp; Strategy</span><span class="chip">Defect Lifecycle</span><span class="chip">Risk Assessment</span><span class="chip">Release Management</span>
         </div>
       </div>
     </div>
@@ -364,8 +399,8 @@
       <div class="glass work-card reveal">
         <div class="glow"></div>
         <span class="tag">SANDBOXED CLOUD ANDROID</span>
-        <h3>OpenClaw</h3>
-        <p>A sandboxed AI product where I benchmarked module behavior against native Android to surface parity gaps before release — making sure the sandbox behaved like the real thing where it mattered.</p>
+        <h3><a href="https://openclaw.ai" target="_blank" rel="noopener" style="border:none;color:inherit">OpenClaw</a></h3>
+        <p>A sandboxed AI product where I benchmarked module behavior against native Android to surface parity gaps before release — making sure the sandbox behaved like the real thing where it mattered. <a href="https://openclaw.ai" target="_blank" rel="noopener">openclaw.ai</a></p>
       </div>
     </div>
   </div>
@@ -379,7 +414,26 @@
     <div class="certs">
       <div class="glass cert reveal"><span class="badge">✓ PASS</span><div class="ctxt"><b>Learn GenAI &amp; AI Agents for Testing</b><span>Udemy</span></div></div>
       <div class="glass cert reveal"><span class="badge">✓ PASS</span><div class="ctxt"><b>Cypress: Modern Automation Testing from Scratch + Frameworks</b><span>Udemy</span></div></div>
-      <div class="glass cert reveal"><span class="badge">✓ PASS</span><div class="ctxt"><b>B.Tech, Computer Science &amp; Engineering</b><span>RDEC, Ghaziabad (AKTU) · 2017–2020</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow reveal">foundations</div>
+    <h2 class="sec-title reveal">Education</h2>
+    <div class="edu-grid">
+      <div class="glass edu reveal">
+        <h3>B.Tech, Computer Science &amp; Engineering</h3>
+        <div class="inst">RDEC, Ghaziabad (AKTU)</div>
+        <div class="edu-meta">2017 – 2020 · 74%</div>
+      </div>
+      <div class="glass edu reveal">
+        <h3>Polytechnic Diploma, Computer Science &amp; Engineering</h3>
+        <div class="inst">MAIT, Ghaziabad (BTEUP)</div>
+        <div class="edu-meta">2014 – 2017 · 72%</div>
+      </div>
     </div>
   </div>
 </section>
@@ -401,6 +455,11 @@
         <div class="cmethod-txt"><span class="cmethod-label">Phone</span><b>+91 96509 40227</b></div>
         <span class="cmethod-arrow">→</span>
       </a>
+      <a href="Vishal_Gupta_QA_Resume.pdf" download class="glass cmethod reveal">
+        <span class="cmethod-ico">↓</span>
+        <div class="cmethod-txt"><span class="cmethod-label">Resume</span><b>Download PDF</b></div>
+        <span class="cmethod-arrow">→</span>
+      </a>
       <a href="https://linkedin.com/in/vishalguptacse" target="_blank" rel="noopener" class="glass cmethod reveal">
         <span class="cmethod-ico">in</span>
         <div class="cmethod-txt"><span class="cmethod-label">Linkedin</span><b>linkedin.com/in/vishalguptacse</b></div>
@@ -409,7 +468,7 @@
     </div>
     <p class="assert-line reveal" style="margin-top:26px;text-align:center">
       <span class="ck">✓</span> based in Ghaziabad / Delhi NCR, India &nbsp;·&nbsp;
-      <span class="ck">✓</span> nearly 6 years QA experience &nbsp;·&nbsp;
+      <span class="ck">✓</span> 6+ years QA experience &nbsp;·&nbsp;
       <span class="ck">✓</span> open to new opportunities
     </p>
   </div>
@@ -443,7 +502,7 @@
   });
 
   /* ---- active nav link on scroll ---- */
-  var sections = ['experience','about','skills','work','contact'];
+  var sections = ['about','experience','skills','work','education','contact'];
   var navMap = {};
   links.querySelectorAll('a').forEach(function(a){ navMap[a.getAttribute('href').slice(1)] = a; });
   var spy = new IntersectionObserver(function(entries){
@@ -468,7 +527,7 @@
   var lines = [
     {cls:'tl-cmd', html:'<span class="pmt">$</span> pytest -v vishal_gupta.py'},
     {cls:'tl-dim', html:'collected 6 items', delay:260},
-    {cls:'tl-pass', html:'<span class="ck">✓</span> test_experience ............... <b>5.8+ yrs · manual · API · mobile</b>', delay:200},
+    {cls:'tl-pass', html:'<span class="ck">✓</span> test_experience ............... <b>6+ yrs · manual · API · mobile</b>', delay:200},
     {cls:'tl-pass', html:'<span class="ck">✓</span> test_specialty ................ AI agent &amp; LLM validation', delay:160},
     {cls:'tl-pass', html:'<span class="ck">✓</span> test_automation ............... Cypress · Pytest · Newman', delay:160},
     {cls:'tl-pass', html:'<span class="ck">✓</span> test_api ...................... Postman · Fiddler', delay:160},
